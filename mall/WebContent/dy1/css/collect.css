@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+.wrapper_box {
+	width: 100%;
+	height: 200px !important;
+	overflow: hidden;
+	position: relative;
+	background-size: 100%;
+}
+
+.bg_all {
+	background-image: url(../src/background/info_bg2.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	width: 100%;
+	height: 800px;
+	position: relative;
+}
+
+.action_search_box {
+	background-image: url(../src/background/bg_search.jpg);
+	background-repeat: no-repeat;
+}
+
+.info_box {
+	width: 1200px;
+	background-color: #FFFFFF;
+	opacity: 0.95;
+	border-radius: 10px;
+	position: relative;
+	top: 50px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.right_title h2 {
+	position: relative;
+	left: 50px;
+}
+
+.top {
+	margin-top: 20px;
+	width: 1000px;
+	height: 43px;
+	margin-left: 320px;
+}
+
+#table-2 thead, #table-2 tr {
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: rgb(230, 189, 189);
+}
+
+#table-2 {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	margin-top: 40px;
+	margin-left: 350px;
+	border-bottom-color: rgb(230, 189, 189);
+}
+
+/* Padding and font style */
+#table-2 td, #table-2 th {
+	text-align: center;
+	padding: 5px 10px;
+	font-size: 12px;
+	font-family: Verdana;
+	color: rgb(177, 106, 104);
+	border: 1px solid #ddd;
+}
+
+/* Alternating background colors */
+#havepay {
+	background: #ffd1a4;
+}
+
+#waitpay {
+	background: #FFF;
+}
+
+#table-2 td>input {
+	background-color: #ffffff;
+	border: none;
+}
+

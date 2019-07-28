@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+.information_box {
+	margin-top: 20px;
+}
+
+.wrapper_box {
+	width: 100%;
+	height: 200px !important;
+	overflow: hidden;
+	position: relative;
+	background-size: 100%;
+}
+
+.bg_all {
+	background-image: url(../src/background/info_bg.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	width: 100%;
+	height: 640px;
+	position: relative;
+}
+
+.action_search_box {
+	background-image: url(../src/background/bg_search.jpg);
+	background-repeat: no-repeat;
+}
+
+.info_box {
+	width: 1200px;
+	background-color: #FFFFFF;
+	opacity: 0.95;
+	border-radius: 10px;
+	position: absolute;
+	top: 50px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.right_title h2 {
+	position: relative;
+	left: 50px;
+}
+
+.information_box>div>div:nth-child(1) {
+	width: 150px;
+	height: 25px;
+	float: left;
+	line-height: 30px;
+	text-align: right;
+	margin-right: 20px;
+}
+
+.information_box>div>div:nth-child(3) {
+	width: 200px;
+	height: 40px;
+	float: left;
+	margin-right: 20px;
+	color: #FF4F33;
+}
+
+.information_box>div>input {
+	float: left;
+	width: 300px;
+	height: 34px;
+	line-height: 39px;
+	text-align: left;
+	margin-right: 20px;
+	padding-left: 10px;
+	float: left;
+}
+
+.information_box>div {
+	overflow: hidden;
+	margin-top: 30px;
+}
+
+#sex_input {
+	width: 300px;
+	height: 34px;
+	line-height: 39px;
+	text-align: left;
+	margin-right: 20px;
+	padding-left: 10px;
+}
+
+.save_btn {
+	display: block;
+	text-align: center;
+	width: 120px;
+	height: 40px;
+	font-size: 20px;
+	color: #FFFFFF;
+	float: left;
+	background-color: #ff9224;
+	line-height: 40px;
+	font-weight: bold;
+	margin-top: 20px;
+	margin-left: 250px;
+}
+

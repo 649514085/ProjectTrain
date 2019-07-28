@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>商品搜索</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/product_search.css">
+	<script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script src="../js/js_main/require.js" defer async="true" data-main="../js/js_main/product_search_main"></script>
+</head>
+<body>
+	<!--顶部导航信息栏-->
+	<header class="header_outbox">
+		<div class="header_inbox">
+			<div class="Message_box">
+				<p>欢迎光临，电商配件平台商城</p>
+				<a href="information_modification.html">&nbsp;&nbsp;&nbsp;&nbsp;[我的主页]</a>
+				<ul>
+					<li><a href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;商城首页</a></li>
+					<li><a href="collect.html">&nbsp;&nbsp;&nbsp;&nbsp;我的收藏</a></li>
+					<li>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+						<a href="cart.html">
+							<img class="cart_logo" src="../src/common/cartlogo.jpg">&nbsp;购物车<span id="cartQuantity">[0]</span>
+						</a>
+					</li>
+				</ul>	
+			</div>
+
+			<div id="times" class="timeDate"></div>
+
+			<div class="load_message">
+				<span id="register_info">
+					<a href="register.html" target="_blank" class="register">&nbsp;&nbsp;&nbsp;&nbsp;注册</a>
+					<a href="login.html" target="_blank" class="login">&nbsp;&nbsp;&nbsp;&nbsp;您好，请登录</a>
+				</span>
+				<span id="login_info" style="display:none;">
+					<a href="#" id="LoginOut" class="quit" style="margin-left:20px;">退出</a>
+					<a href="#" id="LoginName" class="loginMessage"></a>	
+				</span>
+			</div>
+		</div>
+	</header>
+	<!--顶部信息栏结束-->
+
+	<!--搜索栏-->
+	<div class="action_search_box">
+		<div class="logo" src="../src/logo/hou2.png"></div>
+		<div class="position">
+			<h1>小猴机配电商平台</h1>
+			<h2>致力于打造新一流电商平台</h2>
+		</div>
+		<div class="input_box">
+				<input type="text" id="keyword" name="keyword" placeholder="请输入您要搜索的内容或关键字">
+				<button class="searchbtn" id="searchBtn"><img src="../src/common/search.jpg"  class="search_logo"></button>
+		</div>
+	</div>
+	<!--搜索栏结束-->
+
+	<!--商品-->
+	<!--标签搜索开始-->
+	<div class="product">
+		<div class="prouct_nav">
+			<h1>请选择类别<h1>
+		</div>
+
+		<!--产品类型开始-->
+		<div class="list_content_box">
+
+			<!--上半部分开始-->
+			<div>
+				<p>
+					产品类型：
+				</p>
+				<div>
+					<ul id="productTypeContainer">
+
+					</ul>
+				</div>
+			</div>
+			<!--上半部分结束-->
+
+			<!--下半部分开始-->
+			<div>
+				<p>
+					配件类型：
+				</p>
+				<div class="parts_type", id = "parts_type_container">
+					
+				</div>
+			</div>
+			<!--下半部分结束-->
+		</div>
+		<!--产品类型结束-->
+
+		<!--商品列表开始 -->
+		<form action="#" method="get" id="product_form">
+			<input type="hidden" name="pageNumber" id="pageNumber" value="1">
+			<input type="hidden" name="pageSize" id="pageSize" value="20">
+			<div class="probox">
+				
+			</div>
+		</form>
+		<!--商品列表结束 -->
+
+		<!--分页跳转开始-->
+		<div class="page">
+				<a class="btn_prev" href="javascript:void(0)">上一页</a>
+				<span>
+					<a href="javascript:void(0)" class="page_num on"></a>
+				</span>
+				<a class="btn_next" href="javascript:void(0)">下一页</a>
+				<span class=page_count></span>
+		</div>		
+
+		<!--分页跳转结束-->
+	</div>
+
+
+
+	<!--标签搜索结束-->
+
+
+
+
+
+
+	<!--底部保障页-->
+ 	<div id="product_service" class="service">
+        <ul>
+            <li>
+                <p></p><!-- 放背景图 -->
+                <div>
+                    <p>真实货源</p>
+                    <p>一手货源&nbsp;真实存在</p>
+                </div>
+            </li>
+            <li>
+                <p></p>
+
+                <div>
+                    <p>品质保障</p>
+                    <p>垂直专业&nbsp;优选厂商</p>
+                </div>
+            </li>
+            <li>
+                <p></p>
+
+                <div>
+                    <p>服务保障</p>
+                    <p>专业团队&nbsp;为您服务</p>
+                </div>
+            </li>
+            <li>
+                <p></p>
+
+                <div>
+                    <p>交易透明</p>
+                    <p>买卖双方&nbsp;面谈价格</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--底部保障栏结束-->
+
+
+	<!--底部信息栏-->
+	<div class="footerbox">
+   	 	<div class="footer">
+       		 <div class="content_box">
+            	<div>
+               		
+		            <h1>新手指南</h1>
+	               	<a href="#" target="_blank">免费注册</a>
+	              	<a href="#" target="_blank">个人资料及密码</a>
+	                <a href="#" target="_blank">商品关注</a>
+	                <a href="#" target="_blank">查询订单</a>
+	                <a href="#" target="_blank">购物流程</a>
+	            </div>
+
+	            <div>
+	                <h1>付款/退款</h1>
+	                <a href="#" target="_blank">在线支付</a>
+	                <a href="#" target="_blank">银行转账</a>
+	                <a href="#" target="_blank">发票办理</a>
+	                <a href="#" target="_blank">退款查询</a>
+	                <a href="#" target="_blank">退款申诉</a>
+	            </div>
+
+	            <div>
+	                <h1>配送方式</h1>
+	                <a href="#" target="_blank">快递配送</a>
+	                <a href="#" target="_blank">零担物流</a>
+	                <a href="#" target="_blank">安全保障</a>
+	                <a href="#" target="_blank">快递投诉</a>
+	                <a href="#" target="_blank">快递查询</a>
+	            </div>
+
+	            <div>
+	                <h1>售后服务</h1>
+	                <a href="#" target="_blank">退货流程</a>
+	                <a href="#" target="_blank">退货政策</a>
+	                <a href="#" target="_blank">售后客服</a>
+	                <a href="#" target="_blank">售后问卷</a>
+	                <a href="#" target="_blank">一年质保</a>
+	            </div>
+
+	            <div>
+	                <h1>帮助中心</h1>
+	                <a href="#" target="_blank">常见热点问题</a>
+	                <a href="#" target="_blank">联系我们</a>
+	                <a href="#" target="_blank">投诉与建议</a>
+	            </div>
+	        </div>
+	    </div>
+
+   		<div class="copyright_bgcolor">
+        	<div class="copyright">Copyright © 2018 XXXX数字科技有限公司 版权所有 保留一切权利 鲁ICP备XXXXXXXX号-X</div>
+   		</div>
+	</div>
+	<!--底部信息栏结束-->
+</body>
+</html>
+
+<!--产品分类列表-->
+<script id="product_type_list_tpl" type="text/x-handlebars-template">
+{{#each this}}
+	<li><a href="javascript:void(0);" product-type-id='{{type_id}}'>{{type_name}}</a></li>
+{{/each}}
+</script>
+
+<!--配件分类列表-->
+<script id="parts_type_list_tpl" type="text/x-handlebars-template">
+<div>
+	<a href="javascript:void(0);" style="font-size: 20px; margin-left: 10px;">不限</a>
+</div>
+
+{{#each children}}
+	<hr>
+	<div>
+		<p>{{type_name}}:</p>
+			<ul>
+				{{#each children}}
+				<li>
+					<a href="javascript:void(0);" part-type-id='{{type_id}}'>{{type_name}}</a>
+				</li>
+				{{/each}}
+			</ul>
+	</div>
+	</hr>
+	<div class="listline"></div>
+{{/each}}
+</script>
+
+<script id="products_list_tpl" type="text/x-handlebars-template">
+	{{#each this}}
+		<div class="product_index">
+			<a class="product_list" href="product_detail.html?pid={{product_id}}" target="_blank">
+				<img src="{{main_image}}" style="width: 200px;height: 200px;">
+					<h1>
+						￥
+						<strong>{{price}}</strong>
+					</h1>
+					<h2>{{product_name}}</h2>
+			</a>
+		</div>
+	{{/each}}
+</script>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>订单确认</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/order_confirm.css">
+	<link rel="stylesheet" type="text/css" href="../css/cart.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<script src="../js/js_main/require.js" defer async="true" data-main="../js/js_main/order_confirm_main"></script>
+</head>
+<body>
+	<!--顶部导航信息栏-->
+	<header class="header_outbox">
+		<div class="header_inbox">
+			<div class="Message_box">
+				<p>欢迎光临，电商配件平台商城</p>
+				<a href="information_modification.html">&nbsp;&nbsp;&nbsp;&nbsp;[我的主页]</a>
+				<ul>
+					<li><a href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;商城首页</a></li>
+					<li><a href="collect.html">&nbsp;&nbsp;&nbsp;&nbsp;我的收藏</a></li>
+					<li>
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+						<a href="cart.html">
+							<img class="cart_logo" src="../src/common/cartlogo.jpg">&nbsp;购物车<span id="cartQuantity">[0]</span>
+						</a>
+					</li>
+				</ul>	
+			</div>
+
+			<div id="times" class="timeDate"></div>
+
+			<div class="load_message">
+				<span id="register_info">
+					<a href="register.html" target="_blank" class="register">&nbsp;&nbsp;&nbsp;&nbsp;注册</a>
+					<a href="login.html" target="_blank" class="login">&nbsp;&nbsp;&nbsp;&nbsp;您好，请登录</a>
+				</span>
+				<span id="login_info" style="display:none;">
+					<a href="#" id="LoginOut" class="quit" style="margin-left:20px;">退出</a>
+					<a href="#" id="LoginName" class="loginMessage"></a>	
+				</span>
+			</div>
+		</div>
+	</header>
+	<!--顶部信息栏结束-->
+<!--图片栏-->
+<div class="wrapper_box action_search_box">
+	<div class="container">
+		<div class="box">
+		    <div class="title"> <span class="block"></span>
+		    	<h1>小猴机械配件电商平台<span>.</span></h1>
+		    </div>
+		    <div class="role">
+		      	<div class="block"></div>
+		      	<p>快速、安全、质量、方便</br>欢迎进入我的主页—>我的订单—>订单确认</p>
+		    </div>
+		</div>
+	</div>
+</div>
+<!--图片栏结束-->
+<!--左侧个人界面-->
+<div class="bg_all">
+	<div class="info_box">
+		<div class="left_nav l">
+	    	<div class="person_info">
+				<div class="head_img">
+					<img src="../src/common/touxiang.png" alt="">
+				</div >
+			    <div class="welcome_info">hi 亲爱的客户 欢迎回来</div>
+	   		</div>
+		    <div>
+		        <div class="title">
+				    <div class="dashed">我的交易</div>
+		        </div>
+			    <div class="item active"><a href="order_list.html">我的订单</a></div>
+			    <div class="item"><a href="cart.html">我的购物车</a></div>
+			    <div class="item"><a href="collect.html">我的收藏</a></div>
+			    <div class="item"><a href="address_management.html">收货地址管理</a></div>
+		    </div>
+		    <div>
+		        <div class="title">
+				    <div class="dashed">我的账户</div>
+		        </div>
+		        <div class="item"><a href="information_modification.html">个人资料</a></div>
+			    <div class="item"><a href="password_modification.html">修改密码</a></div>
+		    </div>
+        </div>
+<!--右侧界面-->
+        <div class="shopcar_right_box">
+<!--地址信息-->
+        	<div class="address_list">
+				<p class="content_tit">选择收货地址</p>
+				<ul>
+					<div id="addr-item-container"></div>
+					<a class="add_address l" href="address_management.html">新增收货地址</a>
+				</ul>
+        	</div>
+<!--订单信息-->
+        	<div id="order_info clearfix">
+				<h1>确认订单信息</h1>
+				<div class="shopcar_right_top">
+					<div style="padding-left: 70px;padding-right: 110px;">商品名称</div>
+					<div style=" padding-left: 20px;padding-right: 10px;">单价（元）</div>
+					<div style="padding-left: 30px;padding-right: 10px;">数量</div>
+					<div style="padding-left: 50px;padding-right: 10px;">实付（元）</div>
+				</div >
+				<div id="order_confirm_item_container"></div>
+				
+<!--总计结算-->
+				<div class="shop_car_buy" id="shop_car_line" >
+					<a href="order_list.html" class="l" id="prev" ><p>返回结算页</p></a>
+					<a href="javascript:void(0)" class="r" id="submit" ><p>提交订单</p></a>
+						<div class="price">
+							<p>
+								商品金额：
+								<strong>
+									<span id="amount"></span>
+								</strong>
+							</p>
+						</div>
+				</div>
+				<div style="clear:both;"></div>
+			</div>
+        </div>
+        <div style="width:100%;height:100px;"></div>
+	</div>
+</div>
+
+    
+    
+<!--底部信息栏-->
+<div class="footerbox">
+	<div class="footer">
+   		<div class="content_box">
+        	<div>
+           		
+	            <h1>新手指南</h1>
+               	<a href="#" target="_blank">免费注册</a>
+              	<a href="#" target="_blank">个人资料及密码</a>
+                <a href="#" target="_blank">商品关注</a>
+                <a href="#" target="_blank">查询订单</a>
+                <a href="#" target="_blank">购物流程</a>
+            </div>
+
+            <div>
+                <h1>付款/退款</h1>
+                <a href="#" target="_blank">在线支付</a>
+                <a href="#" target="_blank">银行转账</a>
+                <a href="#" target="_blank">发票办理</a>
+                <a href="#" target="_blank">退款查询</a>
+                <a href="#" target="_blank">退款申诉</a>
+            </div>
+
+            <div>
+                <h1>配送方式</h1>
+                <a href="#" target="_blank">快递配送</a>
+                <a href="#" target="_blank">零担物流</a>
+                <a href="#" target="_blank">安全保障</a>
+                <a href="#" target="_blank">快递投诉</a>
+                <a href="#" target="_blank">快递查询</a>
+            </div>
+
+            <div>
+                <h1>售后服务</h1>
+                <a href="#" target="_blank">退货流程</a>
+                <a href="#" target="_blank">退货政策</a>
+                <a href="#" target="_blank">售后客服</a>
+                <a href="#" target="_blank">售后问卷</a>
+                <a href="#" target="_blank">一年质保</a>
+            </div>
+
+            <div>
+                <h1>帮助中心</h1>
+                <a href="#" target="_blank">常见热点问题</a>
+                <a href="#" target="_blank">联系我们</a>
+                <a href="#" target="_blank">投诉与建议</a>
+            </div>
+        </div>
+    </div>
+
+	<div class="copyright_bgcolor">
+    	<div class="copyright">Copyright © 2018 XXXX数字科技有限公司 版权所有 保留一切权利 鲁ICP备XXXXXXXX号-X</div>
+	</div>
+</div>
+<!--底部信息栏结束-->
+</body>
+</html>
+<script id="addr-item-tpl" type="text/x-handlebars-template">
+{{#each this}}
+	{{#if dft}}
+	<li class="address_item selected l">
+	{{else}}
+	<li class="address_item l">
+	{{/if}}
+		<div class="box_user_address">
+			{{#if dft}}
+			<span class="moren_tip" data-default=true data-id="{{addr_id}}">#默认地址</span>
+			{{else}}
+			<span class="moren_tip" data-default=false data-id="{{addr_id}}"></span>
+			{{/if}}
+			<strong class="name">{{name}}&nbsp;&nbsp;收</strong>
+			<div class="text address">{{province}}{{city}}{{district}}{{addr}};{{phone}}</div>
+			<div class="links">
+				<a href="javascript:void(0);" data-id="{{addr_id}}" id="del" class="_del">删除</a>
+				{{#unless dft}}
+				<a href="javascript:void(0);" data-id="{{addr_id}}" id="default" class="_del">设置为默认地址</a>
+				{{/unless}}	
+			</div>
+		</div>					
+	</li>
+{{/each}}
+</script>
+<!-- 购物车中商品列表模板 -->
+<script id="product-item-tpl" type="text/x-handlebars-template">
+{{#each this}}
+	<div class="shop_car_probox">
+		<div class="pro01 l">
+			<input type="hidden" name="id" value="9206">
+			<a href="product_detail.html?pid={{product_id}}" target="_blank">{{product_name}}</a>
+		</div>
+		<div class="pro02 l">
+        	￥{{price}}
+		</div>
+		<div class="pro03 l">
+        	x{{quantity}}
+		</div>
+		<div class="pro04 l">
+        	<span id="single_total">¥{{totalPrice}}</span>
+		</div>
+	</div>		
+{{/each}}
+</script>

@@ -1,0 +1,15 @@
+require.config({
+	paths:{
+		"jquery":"jquery-1.7.2.min",
+		"handlebar":"handlerbars-v4.1.2"	
+	}
+});
+require(['jquery','handlebar','common','order_list'],function(jquery,handlebar,common,order_list){
+	$(function(){
+		//加载登录用户信息
+		common.getUserInfo();
+		//用户登出
+		common.loginOut();
+		order_list.ready();
+});
+});

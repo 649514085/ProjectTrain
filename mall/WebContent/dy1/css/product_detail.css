@@ -1,0 +1,453 @@
+@charset "utf-8";
+
+/*搜索栏*/
+.action_search_box {
+	width: 100%;
+	height: 250px;
+	background-image: url(../src/background/bg_index.jpg);
+}
+
+.action_search_box h1 {
+	color: #FFFFFF;
+	margin-top: 50px;
+}
+
+.action_search_box h2 {
+	color: #FFFFFF;
+}
+
+.position {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+/*左侧开始*/
+/*内容大框*/
+.product {
+	width: 1200px;
+	margin: 0 auto;
+	min-height: 2500px;
+	overflow: hidden;
+	margin-left: 150px;
+}
+
+/*标签导航*/
+.prouct_nav {
+	margin-left: 50px;
+	margin-top: 20px;
+	font-size: 15px;
+}
+
+
+/*左右内容盒子*/
+.product_box {
+	width: 100%;
+	height: 600px;
+}
+
+/*上下图片总盒子*/
+.product_detail_pic {
+	float: left;
+	width: 500px;
+	margin-left: 15px;
+}
+/*上部盒子*/
+.product_content {
+	width: 100%;
+	height: 600px;
+}
+/*大图盒子*/
+.product_bigpicture_box {
+	width: 450px;
+	height: 450px;
+	margin-top: 20px;
+	margin-left: 20px;
+	border: 1px solid #DDD;
+}
+/*大图尺寸*/
+.product_bigpicture_box  img {
+	width: 450px;
+	height: 450px;
+}
+
+/*小图盒子*/
+.product_smallpicture_box {
+	width: 450px;
+	height: 50px;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+/*小图大小*/
+.product_smallpicture_box ul li {
+	float: left;
+	padding-left: 25px;
+}
+
+.product_smallpicture_box ul li img {
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+}
+
+.product_smallpicture_box .left_arrow {
+	float: left;
+	width: 20px;
+	height: 50px;
+	cursor: pointer;
+}
+
+.product_smallpicture_box .right_arrow {
+	float: right;
+	width: 20px;
+	height: 50px;
+	cursor: pointer;
+}
+
+.product_picture_selected {
+	border: 2px solid #A52A2A;
+}
+
+
+/*右侧开始*/
+.product_detail_txt {
+	float: left;
+	margin-top: 20px;
+	width: 500px;
+	height: 500px;
+	margin-left: 50px;
+}
+
+/*加入收藏*/
+.product_name img {
+	width: 30px;
+	height: 30px;
+	float: left;
+}
+
+/*名称*/
+.product_name {
+	margin-left: 20px;
+	width: 400px;
+	height: 50px;
+	position: relative;
+}
+
+.myfavorite {
+	float: left;
+}
+
+.myfavorite img {
+	width: 25px;
+	height: 25px;
+	margin-top: 10px;
+}
+
+.product_info {
+	height: 50px;
+}
+
+.product_info p {
+	font-size: 25px;
+	color: #000000;
+	padding-left: 20px;
+	float: left;
+}
+
+
+
+/*价格*/
+.product_price {
+	margin-top: 20px;
+	height: 120px;
+	background-color: #f5f3ef;
+	width: 400px;
+}
+
+.product_price p {
+	font-size: 15px;
+}
+
+.price1 {
+	height: 30px;
+	margin-left: 15px;
+	padding-top: 10px;
+}
+
+.price1 span {
+	color: #ff4a00;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.price2 {
+	height: 30px;
+	margin-left: 15px;
+	padding-top: 10px;
+}
+
+.price3 {
+	height: 30px;
+	margin-left: 15px;
+	padding-bottom: 10px;
+}
+
+/*购买方式*/
+.product_specification {
+	margin-top: 20px;
+	height: 50px;
+	margin-left: 5px;
+}
+
+.product_specification p {
+	font-size: 18px;
+	float: left;
+}
+
+.pay_type {
+	margin-left: 10px;
+	padding-top: 10px;
+	height: 30px;
+	width: 100px;
+}
+
+.all_pay {
+	float: left;
+	width: 75px;
+	height: 30px;
+	font-size: 18px;
+	margin-top: 10px;
+	border: 2px solid #41B6E7;
+	text-align: center;
+	background-image: url(../src/common/selected.png);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+/*数量*/
+.product_account {
+	margin-top: 20px;
+	height: 50px;
+}
+
+.product_account p {
+	font-size: 18px;
+}
+
+.account {
+	margin-left: 15px;
+	float: left;
+}
+
+.product_num_box {
+	height: 36px;
+}
+
+.product_num_box a {
+	margin-top: 6px;
+	width: 28px;
+	height: 28px;
+	display: block;
+}
+
+.product_num_box input {
+	margin-top: 6px;
+	float: left;
+	width: 45px;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+}
+
+.product_minus_2 {
+	float: left;
+	background-image: url(../src/common/minus_btn.png);
+	background-repeat: no-repeat;
+}
+
+.product_plus_1 {
+	float: left;
+	background-image: url(../src/common/plus_btn.png);
+	background-repeat: no-repeat;
+}
+
+
+
+
+/*JQuery实现数量的增减*/
+.sdddq {
+	font-family: "宋体";
+	font-size: 20px;
+	height: 35px;
+	width: 120px;
+}
+
+
+/*当前库存*/
+.reserve p {
+	margin-left: 15px;
+	margin-top: 5px;
+}
+
+/*按钮*/
+.button {
+	height: 80px;
+}
+/*立刻购买*/
+.product_buy {
+	width: 130px;
+	height: 35px;
+	padding-top: 20px;
+	margin-left: 15px;
+	float: left;
+}
+
+.product_buy img {
+	width: 119px;
+	height: 34px;
+}
+
+.product_cart {
+	width: 130px;
+	height: 35px;
+	float: left;
+	padding-top: 20px;
+	margin-left: 25px;
+}
+
+.product_cart img {
+	width: 119px;
+	height: 34px;
+}
+
+.promise {
+	height: 50px;
+	margin-top: 20px;
+}
+
+.promise p {
+	font-size: 15px;
+	float: left;
+	margin-left: 15px;
+	margin-top: 5px;
+}
+
+.promise img {
+	float: left;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+/*下部*/
+.product_tab_bar_box {
+	width: 980px;
+}
+
+.product_tab_box {
+	margin-left: 30px;
+}
+
+.product_tab_bar {
+	background-image: url(../src/common/productTabBar_bg.png);
+	background-repeat: no-repeat;
+	background-size: 951px;
+	overflow: hidden;
+}
+
+.product_tab_bar li {
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	font-size: 15px;
+	margin-top: 6px;
+	padding-left: 5px;
+	padding-right: 5px;
+	color: #876a6a;
+	cursor: pointer;
+	text-align:center;
+}
+
+/*内容头部*/
+.product_detail_titie {
+	font-size: 25px;
+	margin-left: 10px;
+}
+
+.product_tab_detail {
+	margin-top: -5px;
+	border: 1px solid #DDD;
+	border-top: none;
+}
+
+.product_tab_selected {
+	background-color: #FFFFFF;
+	border: 1px solid #DDD;
+	border-bottom: none;
+}
+
+.product_detail_content {
+	width: 901px;
+}
+
+.details {
+	width: 900px;
+	background-color: #f5f3ef;
+	overflow: hidden;
+}
+
+.details span {
+	font-size: 20px;
+	color: red;
+	margin-left: 10px;
+}
+
+.details p {
+	font-size: 15px;
+	color: #696969;
+}
+
+.picture img {
+	padding-top: 20px;
+	margin: 0 auto;
+}
+
+.text {
+	margin-left: 20px;
+}
+
+.text p {
+	font-size: 20px;
+	color: #505050;
+	font-weight: bold;
+}
+
+.text h1 {
+	font-size: 40px;
+	color: #FFA500;
+}
+
+.promise_text {
+	margin-left: 20px;
+}
+
+.promise_font img {
+	width: 60px;
+	height: 60px;
+	float: left;
+}
+
+.promise_font {
+	height: 100px;
+}
+
+.promise_font p {
+	float: left;
+	margin-left: 20px;
+}
+
+.promise_font span {
+	font-size: 20px;
+	font-weight: bold;
+	color: #e50100;
+}

@@ -1,0 +1,94 @@
+.wrapper_box {
+	width: 100%;
+	height: 200px !important;
+	overflow: hidden;
+	position: relative;
+	background-size: 100%;
+}
+
+.action_search_box {
+	background-image: url(../src/background/bg_pay.jpg);
+	background-repeat: no-repeat;
+}
+
+.bg_all {
+	position: relative;
+	width: 100%;
+	min-height: 600px;
+	background-image: url(../src/background/background_pb.jpg);
+}
+
+.info_box {
+	width: 1000px;
+	background-color: #FFFFFF;
+	opacity: 0.90;
+	border-radius: 10px;
+	position: relative;
+	top: 50px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	min-height: 500px;
+}
+
+.info_box {
+	background-color: #FFFFFF;
+}
+
+.total_price{
+	margin-left: 30px;
+}
+
+.total_price span {
+	color: #F76707;
+}
+
+.pay_way {
+	width: 950px;
+	height: 200px;
+	font-size: 20px;
+	position: relative;
+	top: 5px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+
+.pay_selected {
+	width: 950px;
+	border: 2px solid #B3B3B3;
+}
+
+.pay_selected input {
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.pay_selected img {
+	margin-left: 10px;
+}
+
+.pay_selected p {
+	margin-left: 10px;
+}
+
+.pay_price {
+	float: right;
+}
+
+.pay_price span {
+	color: #F76707;
+}
+
+.pay_btn {
+	width: 100px;
+	height: 30px;
+	margin-top: 50px;
+	margin-right:-120px;
+	background-color: #F76707;
+	font-size: 18px;
+	color: #FFFFFF;
+}

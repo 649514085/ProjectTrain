@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>收货地址管理</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/address_management.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<script type="text/javascript" src="../js/js_main/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="../js/jqueryDistpicker/distpicker.data.js"></script>
+	<script type="text/javascript" src="../js/jqueryDistpicker/distpicker.js"></script>
+	<script src="../js/js_main/require.js" defer async="true" data-main="../js/js_main/address_management_main"></script>
+</head>
+<body>
+<!--顶部导航信息栏-->
+<header class="header_outbox">
+	<div class="header_inbox">
+		<div class="Message_box">
+			<p>欢迎光临，电商配件平台商城</p>
+			<a href="information_modification.html">&nbsp;&nbsp;&nbsp;&nbsp;[我的主页]</a>
+			<ul>
+				<li><a href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;商城首页</a></li>
+				<li><a href="collect.html">&nbsp;&nbsp;&nbsp;&nbsp;我的收藏</a></li>
+				<li>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+					<a href="cart.html">
+						<img class="cart_logo" src="../src/common/cartlogo.jpg">&nbsp;购物车<span id="cartQuantity">[0]</span>
+					</a>
+				</li>
+			</ul>	
+		</div>
+
+		<div id="times" class="timeDate"></div>
+
+		<div class="load_message">
+			<span id="register_info">
+				<a href="register.html" target="_blank" class="register">&nbsp;&nbsp;&nbsp;&nbsp;注册</a>
+				<a href="login.html" target="_blank" class="login">&nbsp;&nbsp;&nbsp;&nbsp;您好，请登录</a>
+			</span>
+			<span id="login_info" style="display:none;">
+				<a href="#" id="LoginOut" class="quit" style="margin-left:20px;">退出</a>
+				<a href="#" id="LoginName" class="loginMessage"></a>	
+			</span>
+		</div>
+	</div>
+</header>
+<!--顶部信息栏结束-->
+
+<!--图片栏-->
+<div class="wrapper_box action_search_box">
+	<div class="container">
+	    <div class="box">
+	    	<div class="title"> 
+	    		<span class="block"></span>
+	      		<h1>小猴机械配件电商平台<span>.</span></h1>
+	      	</div>
+	    	<div class="role">
+	    		<div class="block"></div>
+	    		<p>快速、安全、质量、方便</br>欢迎进入我的主页—>地址管理</p>
+	    	</div>
+		</div>
+	</div>
+</div>
+<!--图片栏结束-->
+
+<!--界面-->
+<div class="bg_all">
+	<div class="info_box">
+		<!--左侧开始-->
+	    <div class="left_nav l ">
+	    	<div class="person_info">
+				<div class="head_img">
+					<img src="../src/common/touxiang.png" alt="">
+				</div >
+			    <div class="welcome_info">hi 亲爱的客户 欢迎回来</div>
+	   		</div>
+
+		    <div>
+		        <div class="title">
+				    <div class="dashed">我的交易</div>
+		        </div>
+			    <div class="item"><a href="order_list.html">我的订单</a></div>
+			    <div class="item "><a href="cart.html">我的购物车</a></div>
+			    <div class="item"><a href="collect.html">我的收藏</a></div>
+			    <div class="item active"><a href="address_management.html">收货地址管理</a></div>
+		    </div>
+
+		    <div>
+		        <div class="title">
+				    <div class="dashed">我的账户</div>
+		        </div>
+		        <div class="item"><a href="information_modification.html">个人资料</a></div>
+			    <div class="item"><a href="password_modification.html">修改密码</a></div>
+		    </div>
+	    </div>
+	    <!--左侧结束-->
+
+		<!--右侧地址管理页-->
+		<div class="new_address">
+			<div class="right_title">			
+				<h2>收货地址管理</h2>
+			</div>
+
+			<hr style="width: 1040px; float: left; border:none; border-top: 1px solid #DDD;margin:5px 0px 0px 0px;">
+			<p>新增/修改收货地址</p>
+
+			<form  method="post" novalidate="novalidate">
+				<div class="t1">
+	        		<div class="input_title"><span style="color: red;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span>地区:&nbsp;&nbsp;</div>
+	        		<div data-toggle="distpicker" id="distpicker1" >
+	            		<select id="eprovinceName"></select>
+	            		<select id="ecityName"></select>
+	               		<select id="edistrictName"></select>
+	      			</div>
+	    		</div>
+				<div>
+	  				<div class="input_title"><span style="color: red;">*</span>详细地址信息：</div>
+	  				<input class="input_message" id="detailAddr" type="text" placeholder="请填写您的详细地址" >
+				</div>
+				<div>
+	  				<div class="input_title "><span style="color: red;">&nbsp;&nbsp;&nbsp;*</span>收货人姓名：</div>
+	  				<input type="text" class="input_message" id="consignee" placeholder="长度不超过15个字符" maxlength="15">
+				</div>
+				<div>
+	  				<div class="input_title"><span style="color: red;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span>手机号码：</div>
+	  				<input type="text" class="input_message" placeholder="长度不超过15个字符" maxlength="15" id="phone">
+				</div>
+				<input id="btnSave" type="submit" value="保存" class="save_btn">
+			</form>
+		</div> 
+		<!--右侧地址管理页结束-->
+
+		<div class="address_look">
+			<form  method="post" novalidate="novalidate">
+			<!--动态添加-->
+				<table id="address_container">		
+			    </table>
+		
+			</form> 
+		</div>
+		<div style="height:200px;width:100%;">
+		</div>
+	</div>
+</div>
+<!--界面结束-->		
+
+<!--底部信息栏-->
+<div class="footerbox">
+	 <div class="footer">
+   		 <div class="content_box">
+        	<div>
+	            <h1>新手指南</h1>
+               	<a href="#" target="_blank">免费注册</a>
+              	<a href="#" target="_blank">个人资料及密码</a>
+                <a href="#" target="_blank">商品关注</a>
+                <a href="#" target="_blank">查询订单</a>
+                <a href="#" target="_blank">购物流程</a>
+            </div>
+
+            <div>
+                <h1>付款/退款</h1>
+                <a href="#" target="_blank">在线支付</a>
+                <a href="#" target="_blank">银行转账</a>
+                <a href="#" target="_blank">发票办理</a>
+                <a href="#" target="_blank">退款查询</a>
+                <a href="#" target="_blank">退款申诉</a>
+            </div>
+
+            <div>
+                <h1>配送方式</h1>
+                <a href="#" target="_blank">快递配送</a>
+                <a href="#" target="_blank">零担物流</a>
+                <a href="#" target="_blank">安全保障</a>
+                <a href="#" target="_blank">快递投诉</a>
+                <a href="#" target="_blank">快递查询</a>
+            </div>
+
+            <div>
+                <h1>售后服务</h1>
+                <a href="#" target="_blank">退货流程</a>
+                <a href="#" target="_blank">退货政策</a>
+                <a href="#" target="_blank">售后客服</a>
+                <a href="#" target="_blank">售后问卷</a>
+                <a href="#" target="_blank">一年质保</a>
+            </div>
+
+            <div>
+                <h1>帮助中心</h1>
+                <a href="#" target="_blank">常见热点问题</a>
+                <a href="#" target="_blank">联系我们</a>
+                <a href="#" target="_blank">投诉与建议</a>
+            </div>
+        </div>
+    </div>
+
+	<div class="copyright_bgcolor">
+    	<div class="copyright">Copyright © 2018 XXXX数字科技有限公司 版权所有 保留一切权利 鲁ICP备XXXXXXXX号-X</div>
+	</div>
+</div>
+<!--底部信息栏结束-->
+		   
+
+
+
+	
+</body>
+</html>
+<script id="address_tpl" type="text/x-handlebars-template">
+	<colgroup>
+		<col  style="width:120px">
+		<col  style="width:120px">
+		<col  style="width:200px">
+		<col  style="width: 140px">
+		<col  style="width: 110px">
+		<col  style="width:90px">
+	</colgroup>
+    <thead >
+    	<tr class="address_table">
+        	<th>收货人姓名</th>
+	        <th>所在地区</th>
+	        <th>详细地址</th>
+	        <th>联系方式</th>
+	        <th>操作</th>
+	        <th>默认</th>
+    	</tr>	
+    </thead>
+
+	{{#each this}}
+    <tr class="address_table1" >
+			<td>{{name}}</td>
+			<td>{{province}}{{city}}{{district}}</td>
+			<td>{{addr}}</td>
+			<td>{{phone}}</td>
+			<td><a href="" class="addr_update" addr_id={{addr_id}}>修改</a><span>|</span><a class="addr_del" href="" addr_id={{addr_id}}>删除</a></td>
+			{{#if dft}}
+			<td><p style="color:#ff0000">默认地址</p></td>
+			{{else}}
+			<td><a href="" class="btn_default" addr_id={{addr_id}}>设置默认</a></td>
+			{{/if}}
+			
+    </tr>
+	{{/each}}
+</script>

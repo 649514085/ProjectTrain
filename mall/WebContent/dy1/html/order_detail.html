@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>订单详情</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/order_detail.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<script src="../js/js_main/require.js" defer async="true" data-main="../js/js_main/order_detail_main"></script>
+</head>
+<body>
+<!--顶部导航信息栏-->
+<header class="header_outbox">
+	<div class="header_inbox">
+		<div class="Message_box">
+			<p>欢迎光临，电商配件平台商城</p>
+			<a href="information_modification.html">&nbsp;&nbsp;&nbsp;&nbsp;[我的主页]</a>
+			<ul>
+				<li><a href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;商城首页</a></li>
+				<li><a href="collect.html">&nbsp;&nbsp;&nbsp;&nbsp;我的收藏</a></li>
+				<li>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+					<a href="cart.html">
+						<img class="cart_logo" src="../src/common/cartlogo.jpg">&nbsp;购物车<span id="cartQuantity">[0]</span>
+					</a>
+				</li>
+			</ul>	
+		</div>
+
+		<div id="times" class="timeDate"></div>
+
+		<div class="load_message">
+			<span id="register_info">
+				<a href="register.html" target="_blank" class="register">&nbsp;&nbsp;&nbsp;&nbsp;注册</a>
+				<a href="login.html" target="_blank" class="login">&nbsp;&nbsp;&nbsp;&nbsp;您好，请登录</a>
+			</span>
+			<span id="login_info" style="display:none;">
+				<a href="#" id="LoginOut" class="quit" style="margin-left:20px;">退出</a>
+				<a href="#" id="LoginName" class="loginMessage"></a>	
+			</span>
+		</div>
+	</div>
+</header>
+<!--顶部信息栏结束-->
+
+<!--图片栏-->
+<div class="wrapper_box action_search_box">
+	<div class="container">
+		<div class="box">
+		    <div class="title"> <span class="block"></span>
+		    	<h1>小猴机械配件电商平台<span>.</span></h1>
+		    </div>
+		    <div class="role">
+		      	<div class="block"></div>
+		      	<p>快速、安全、质量、方便</br>欢迎进入我的主页—>我的订单—>订单详情</p>
+		    </div>
+		</div>
+	</div>
+</div>
+<!--图片栏结束-->
+
+<!--界面-->
+<div class="bg_all">
+	<div class="info_box">
+		<!--左侧开始-->
+		<div class="left_nav l">
+	    	<div class="person_info">
+				<div class="head_img">
+					<img src="../src/common/touxiang.png" alt="">
+				</div >
+			    <div class="welcome_info">hi 亲爱的客户 欢迎回来</div>
+	   		</div>
+		    <div>
+		        <div class="title">
+				    <div class="dashed">我的交易</div>
+		        </div>
+			    <div class="item active"><a href="order_list.html">我的订单</a></div>
+			    <div class="item"><a href="cart.html">我的购物车</a></div>
+			    <div class="item"><a href="collect.html">我的收藏</a></div>
+			    <div class="item"><a href="address_management.html">收货地址管理</a></div>
+		    </div>
+		    <div>
+		        <div class="title">
+				    <div class="dashed">我的账户</div>
+		        </div>
+		        <div class="item"><a href="information_modification.html">个人资料</a></div>
+			    <div class="item"><a href="password_modification.html">修改密码</a></div>
+		    </div>
+        </div>
+        <!--左侧结束-->
+
+		<!--右侧界面-->
+        <div class="shopcar_right_box ">
+        	<div class="right_title">
+        		<h2>订单详情</h2>
+        	</div>
+			<hr style="width: 1040px; float: left; border:none; border-top: 1px solid #DDD;margin:5px 0px 0px 0px;">
+			<div class="user_order_detail">
+				<div>
+					<dl>
+						<dt>订单状态：新订单</dt>
+					</dl>
+					<dl>
+						<dt>收货地址：</dt>
+						<dd>收货联系方式：<span id="address-container"></span></dd>
+					</dl>
+					<dl>
+						<dt>订单信息</dt>
+						<dd>订单编号：<span id="ordernum-container"></span></dd>
+						<dd>下单时间：<span id="order-created-container"></span></dd>
+						<dd>应支付金额：￥<span id="order-price-container"></span></dd>
+						<dd>订单状态：<span id="order-status-container"></span></dd>
+						<dd>支付时间：<span id="order-paytime-container"></span></dd>
+						<dd>发货时间：<span id="order-fahuo-container"></span></dd>
+						<dd>完成时间：<span id="order-finish-container"></span></dd>
+					</dl>
+					<div class="btn_box ">
+						<a class="btn address_submit l" id="order_pay" href="javascript:void(0)">支付</a>
+						<a class="btn address_cancel l"  id="order_cancel" href="javascript:void(0)">遇到问题了？点击取消订单</a>
+					</div>
+				</div>
+				<table class="table_bordered">
+					<thead>
+						<tr>
+							<th>商品</th>
+							<th>单价</th>
+							<th>数量</th>
+							<th>总价</th>
+						</tr>
+					</thead>
+					<tbody id="item-container">
+					</tbody>
+				</table>
+			</div>	
+			<div style="height:50px; width:100%;"></div>
+        </div>
+        <!--右侧结束-->
+			
+	</div>
+
+</div>
+
+<!--底部信息栏-->
+<div class="footerbox">
+	<div class="footer">
+   		<div class="content_box">
+        	<div>
+           		
+	            <h1>新手指南</h1>
+               	<a href="#" target="_blank">免费注册</a>
+              	<a href="#" target="_blank">个人资料及密码</a>
+                <a href="#" target="_blank">商品关注</a>
+                <a href="#" target="_blank">查询订单</a>
+                <a href="#" target="_blank">购物流程</a>
+            </div>
+
+            <div>
+                <h1>付款/退款</h1>
+                <a href="#" target="_blank">在线支付</a>
+                <a href="#" target="_blank">银行转账</a>
+                <a href="#" target="_blank">发票办理</a>
+                <a href="#" target="_blank">退款查询</a>
+                <a href="#" target="_blank">退款申诉</a>
+            </div>
+
+            <div>
+                <h1>配送方式</h1>
+                <a href="#" target="_blank">快递配送</a>
+                <a href="#" target="_blank">零担物流</a>
+                <a href="#" target="_blank">安全保障</a>
+                <a href="#" target="_blank">快递投诉</a>
+                <a href="#" target="_blank">快递查询</a>
+            </div>
+
+            <div>
+                <h1>售后服务</h1>
+                <a href="#" target="_blank">退货流程</a>
+                <a href="#" target="_blank">退货政策</a>
+                <a href="#" target="_blank">售后客服</a>
+                <a href="#" target="_blank">售后问卷</a>
+                <a href="#" target="_blank">一年质保</a>
+            </div>
+
+            <div>
+                <h1>帮助中心</h1>
+                <a href="#" target="_blank">常见热点问题</a>
+                <a href="#" target="_blank">联系我们</a>
+                <a href="#" target="_blank">投诉与建议</a>
+            </div>
+        </div>
+    </div>
+
+	<div class="copyright_bgcolor">
+    	<div class="copyright">Copyright © 2018 XXXX数字科技有限公司 版权所有 保留一切权利 鲁ICP备XXXXXXXX号-X</div>
+	</div>
+</div>
+<!--底部信息栏结束-->
+</body>
+</html>
+<!-- 订单中商品列表模板 -->
+<script id="product-item-tpl" type="text/x-handlebars-template">
+{{#each this}}
+	<tr class="order_item">
+		<td class="item">
+			<div class="pic_info">
+				<div class="pic s50">
+					<a href="#" hidefocus="true" target="_blank">
+					<img class="f1" src="">
+					</a>
+				</div>
+			</div>
+			<div class="txt_info">
+				<div class="desc">
+					<p class="name">
+						<a href="product_detail.html?pid={{goodsId}}" target="_blank">{{productName}}</a>
+					</p>
+					<p class="good_icons"></p>
+				</div>
+			</div>
+		</td>
+		<td class="price">￥{{curPrice}}</td>
+		<td class="num">{{quantity}}</td>
+		<td class="order_price">￥{{totalPrice}}</td>
+	</tr>
+{{/each}}
+</script>

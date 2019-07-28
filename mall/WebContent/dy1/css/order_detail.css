@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+.wrapper_box {
+	width: 100%;
+	height: 200px !important;
+	overflow: hidden;
+	position: relative;
+	background-size: 100%;
+	
+}
+
+.bg_all {
+	background-image: url(../src/background/info_bg2.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	position: relative;
+	min-height:800px;
+	overflow:hidden;
+}
+
+.action_search_box {
+	background-image: url(../src/background/bg_search.jpg);
+	background-repeat: no-repeat;
+}
+
+.info_box {
+	width: 1200px;
+	background-color: #FFFFFF;
+	opacity: 0.95;
+	border-radius: 10px;
+	position: relative;
+	top: 50px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.right_title h2 {
+	position: relative;
+	left: 50px;
+}
+
+.user_order_detail {
+	margin: 20px 350px 20px;
+	border: 1px solid #aec7e5;
+	position: relative;
+	padding: 20px;
+	overflow: hidden;
+}
+
+.user_order_detail dt {
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.user_order_detail dl {
+	padding-bottom: 20px;
+	border-bottom: solid 1px #ddd;
+}
+
+.user_order_detail dd {
+	line-height: 30px;
+}
+
+.user_order_detail>div>dl:nth-child(2) {
+	margin-top: 20px;
+}
+
+.user_order_detail>div>dl:nth-child(3) {
+	margin-top: 22px;
+	border-bottom: none;
+}
+
+.user_order_detail>div>dl:nth-child(3)>>dd {
+	float: left;
+	width: 50%;
+}
+
+.table_bordered {
+	border: 1px solid #dddddd;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.table_bordered thead {
+	color: #404040;
+	background: #f1f1f1;
+}
+
+.table_bordered thead>tr {
+	height: 60px;
+	font-size: 13px;
+}
+
+.table_bordered tbody td {
+	text-align: center;
+	border: 1px solid #ddd;
+	height: 80px;
+}
+
+.address_submit {
+	width: 100px;
+	height: 40px;
+	font-size: 16px;
+	color: #ffffff;
+	background-color: #ff9224;
+	display: block;
+	text-align: center;
+	line-height: 40px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	float: right;
+}
+
+.address_cancel {
+	color: #6495ED;
+}
+
+.return_list {
+	line-height: 12px;
+	color: #41b6e7;
+	margin-left: 350px;
+}
+
+#pay_btn {
+	display: block;
+	text-align: center;
+	width: 100px;
+	height: 40px;
+	font-size: 16px;
+	color: #ffffff;
+	background-color: #2894ff;
+	line-height: 40px;
+	font-weight: bold;
+	margin-top: 20px;
+	margin-left: 390px;
+}
+
+
