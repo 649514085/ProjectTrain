@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 2 | Starter</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../bower_components/Ionicons/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
+        page. However, you can choose any other skin. Make sure you
+        apply the skin class to the body tag so the changes take effect. -->
+  <link rel="stylesheet" href="../dist/css/skins/skin-blue.min.css">
+  <link rel="stylesheet" href="../bower_components/datatables.net-bs/css/dataTables.bootstrap.css">
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <!-- Main Header -->
+  <header class="main-header">
+
+    <!-- Logo -->
+    <a href="index2.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>A</b>LT</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg">后台管理平台</span>
+    </a>
+
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top" role="navigation">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+      <!-- Navbar Right Menu -->
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <!-- User Account Menu -->
+          <li class="dropdown user user-menu">
+            <!-- Menu Toggle Button -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <!-- The user image in the navbar-->
+              <img src="../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <!-- hidden-xs hides the username on small devices so only the image appears. -->
+              <span class="hidden-xs">管理员</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- The user image in the menu -->
+              <li class="user-header">
+                <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+
+                <p>
+                  管理员
+                  <small></small>
+                </p>
+              </li>
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-right">
+                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>管理员</p>
+          <!-- Status -->
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+      </div>
+
+
+      <!-- Sidebar Menu -->
+      <ul class="sidebar-menu" data-widget="tree">
+        <!-- Optionally, you can add icons to the links -->
+        <li class="user-manager"><a href="user-manager.html"><i class="fa fa-link"></i> <span>用户管理</span></a></li>
+        <li class="product-manager"><a href="product-manager.html"><i class="fa fa-link"></i> <span>商品管理</span></a></li>
+        <li class="type-manager"><a href="type-manager.html"><i class="fa fa-link"></i> <span>类型管理</span></a></li>
+        <li class="order-manager"><a href="order-manager.html"><i class="fa fa-link"></i> <span>订单管理</span></a></li>
+
+      </ul>
+      <!-- /.sidebar-menu -->
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        新增商品类型
+        <small></small>
+      </h1>
+    </section>
+
+    <!-- Main content -->
+    <section class="content container-fluid">
+      <form class="form-horizontal">
+        <div class="container">
+            <div class="row">
+              <label class="control-label col-lg-6" for="name"><h3>新增类型</h3></label>                
+            </div>
+            <br>
+            
+            <div class="form-group">
+              <label class="control-label col-lg-3">祖商品类型</label>
+              <div class="col-lg-5 col-md-6">
+                <select id="gparent" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" id="one">
+                  <option value="">-请选择祖类型-</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label id="parent_label" class="control-label col-lg-3" style="display:none">父商品类型</label>
+              <div class="col-lg-5 col-md-6">
+                <select id="parent" class="form-control select2 select2-hidden-accessible" style="width: 100%;display:none" tabindex="-1" aria-hidden="true" id="two">
+                  <option value="">-请选择父类型-</option>
+                </select>
+              </div>
+            </div>
+            
+         	<div class="row form-group">
+                <label class="control-label col-lg-3">类型名称</label>
+                <div class="col-lg-5 col-md-6">
+                    <input id="type_name" class="form-control" type="text">
+                </div>
+            </div>
+            <br>
+            
+            <div class="row form-group">
+                <label class="control-label col-lg-4"></label>
+                <div class="col-lg-3 col-md-3">
+                    <button id="save" type="button" class="btn btn-block btn-primary btn-lg">提交</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+    <div class="pull-right hidden-xs">
+      
+    </div>
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2019 <a href="#">Company</a>.</strong> 小猴啦啦啦
+  </footer>
+
+  <!-- Add the sidebar's background. This div must be placed
+  immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<script id="param_item_tpl" type="text/x-handlebars-template">
+{{#each this}}
+	<option value="{{type_id}}">{{type_name}}</option>
+{{/each}}
+</script>
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../dist/js/adminlte.min.js"></script>
+<script src="../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="../../resources/js/handlebars-v4.1.2.js"></script>
+<script src="../../resources/js/require.js" defer async="true" data-main="../../resources/js/type_add_main"></script>
+</body>
+</html>
